@@ -1,0 +1,5 @@
+file: index
+sections:
+- file: machine-learning-course/index
+  sections:
+  - file: machine-learning-course/notebooks/my_fisrt_notebook

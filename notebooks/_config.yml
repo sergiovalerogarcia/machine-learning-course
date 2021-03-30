@@ -1,0 +1,7 @@
+title: My sample book
+repository:
+  url: https://github.com/yourusername/yourbookrepo
+html:
+  use_repository_button: true
+execute:
+  execute_notebooks: 'off'

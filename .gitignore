@@ -1,0 +1,9 @@
+*.json
+*.secrets
+.ipynb_checkpoints
+.idea
+__pycache__
+/site
+data
+_build
+.Trash-1000
