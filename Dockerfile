@@ -14,8 +14,10 @@ RUN apt-get update && \
     texlive-xetex \
     texlive-generic-extra \
     pandoc \
-    git \
-    build-essential libsasl2-dev libsasl2-2 libsasl2-modules-gssapi-mit
+    build-essential libsasl2-dev libsasl2-2 libsasl2-modules-gssapi-mit \
+    bash-completion \
+    ssh \
+    git
 
 RUN pip3 install --upgrade pip && \
     pip3 install jupyterlab && \
