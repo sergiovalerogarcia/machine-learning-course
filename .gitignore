@@ -1,4 +1,3 @@
-*.json
 *.secrets
 .ipynb_checkpoints
 .idea
@@ -7,3 +6,5 @@ __pycache__
 data
 _build
 .Trash-1000
+.config/custom
+.config/migrated

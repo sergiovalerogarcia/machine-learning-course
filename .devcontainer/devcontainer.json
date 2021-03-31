@@ -1,0 +1,10 @@
+{
+  "build": { "dockerfile": "../Dockerfile" },
+  "runArgs": [
+    "--network", "host",
+    "--env-file",".env.properties",
+    "--env-file",".env.secrets",
+    "-e JUPYTER_ENABLE_LAB=yes",
+  ],
+  "postCreateCommand": "bash .devcontainer/install-dev-tools.sh && pip freeze > requirements.txt"
+}

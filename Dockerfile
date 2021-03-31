@@ -43,6 +43,12 @@ RUN pip install jupyter_contrib_nbextensions && \
 RUN pip install jupytext && \ 
     pip install -U jupyter-book
 
+RUN pip install scikit-learn && \
+    pip install tensorflow
+    
+RUN pip install xlrd && \
+    pip install jupyterthemes
+
 RUN useradd -ms /bin/bash jupyuser
 
 USER jupyuser

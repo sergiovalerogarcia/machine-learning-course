@@ -1,0 +1,14 @@
+{
+  "load_extensions": {
+    "nbextensions_configurator/config_menu/main": true,
+    "execute_time/ExecuteTime": true,
+    "toc2/main": true
+  },
+  "toc2": {
+    "skip_h1_title": true
+  },
+  "Notebook": {
+    "Header": true,
+    "Toolbar": true
+  }
+}
