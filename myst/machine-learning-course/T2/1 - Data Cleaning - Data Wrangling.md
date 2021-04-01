@@ -32,7 +32,7 @@ data = pd.read_csv(mainpath + folder + '/Customer Churn Model.txt')
 data.head()
 ```
 
-# Crear un subconjunto de datos
+## Crear un subconjunto de datos
 
 ```{code-cell} ipython3
 data["Account Length"]
