@@ -14,9 +14,10 @@ jobs:
         run: |
           pip install -U jupyter-book
           ./generate-book.sh
+          touch notebooks-library/_build/html/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: notebooks-library/_build # The folder the action should deploy.
+          folder: notebooks-library/_build/html # The folder the action should deploy.
