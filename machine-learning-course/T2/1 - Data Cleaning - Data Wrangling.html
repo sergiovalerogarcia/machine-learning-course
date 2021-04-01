@@ -54,7 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="1 - Read data" href="../T1/1%20-%20Read%20data.html" />
+    <link rel="next" title="2 - Funciones de distribución de probabilidades" href="2%20-%20Funciones%20de%20distribucion%20de%20probabilidades.html" />
+    <link rel="prev" title="T2" href="index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -119,15 +120,24 @@
     <i class="fas fa-chevron-down">
     </i>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     1 - Data Cleaning - Data Wrangling
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="index.html">
+     T2
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#crear-un-subconjunto-de-datos">
-     Crear un subconjunto de datos
-    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       1 - Data Cleaning - Data Wrangling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="2%20-%20Funciones%20de%20distribucion%20de%20probabilidades.html">
+       2 - Funciones de distribución de probabilidades
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -234,49 +244,40 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   1 - Data Cleaning - Data Wrangling
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-wrangling">
+   Data Wrangling
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-wrangling">
-     Data Wrangling
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#crear-un-subconjunto-de-datos">
    Crear un subconjunto de datos
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#filter">
-     Filter
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#new-columns">
-     New columns
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#generacion-de-numeros-aleatorios">
-     Generación de números aleatorios
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#shuffling">
-     Shuffling
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#seed">
-     Seed
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filter">
+   Filter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-columns">
+   New columns
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generacion-de-numeros-aleatorios">
+   Generación de números aleatorios
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shuffling">
+   Shuffling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seed">
+   Seed
+  </a>
  </li>
 </ul>
 
@@ -297,6 +298,8 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
 </pre></div>
 </div>
 </div>
@@ -486,9 +489,8 @@
 </div></div></div>
 </div>
 </div>
-</div>
 <div class="section" id="crear-un-subconjunto-de-datos">
-<h1>Crear un subconjunto de datos<a class="headerlink" href="#crear-un-subconjunto-de-datos" title="Permalink to this headline">¶</a></h1>
+<h2>Crear un subconjunto de datos<a class="headerlink" href="#crear-un-subconjunto-de-datos" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Account Length&quot;</span><span class="p">]</span>
@@ -844,6 +846,7 @@ Name: Account Length, Length: 3333, dtype: int64
 </table>
 <p>4 rows × 21 columns</p>
 </div></div></div>
+</div>
 </div>
 <div class="section" id="filter">
 <h2>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
@@ -1559,13 +1562,6 @@ Name: Account Length, Length: 3333, dtype: int64
 <h2>Generación de números aleatorios<a class="headerlink" href="#generacion-de-numeros-aleatorios" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1605,13 +1601,6 @@ Name: Account Length, Length: 3333, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[19, 11, 10, 18, 3, 6, 16, 7]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 </pre></div>
 </div>
 </div>
@@ -1671,6 +1660,24 @@ Name: Account Length, Length: 3333, dtype: int64
 </div>
 <div class="section" id="seed">
 <h2>Seed<a class="headerlink" href="#seed" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
+<span class="n">random_array</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="n">random_array</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1915194503788923,
+ 0.6221087710398319,
+ 0.4377277390071145,
+ 0.7853585837137692,
+ 0.7799758081188035]
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -1699,7 +1706,8 @@ Name: Account Length, Length: 3333, dtype: int64
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../T1/1%20-%20Read%20data.html" title="previous page">1 - Read data</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">T2</a>
+    <a class='right-next' id="next-link" href="2%20-%20Funciones%20de%20distribucion%20de%20probabilidades.html" title="next page">2 - Funciones de distribución de probabilidades</a>
 
         </div>
         
