@@ -1,9 +1,0 @@
-file: index
-sections:
-- file: machine-learning-course/index
-  sections:
-  - file: machine-learning-course/T1/index
-    sections:
-    - file: machine-learning-course/T1/T1 - 3 - Data Cleaning - Plots
-    - file: machine-learning-course/T1/T1 - 2 - Pre Analisys
-    - file: machine-learning-course/T1/T1 - 1 - Read data
