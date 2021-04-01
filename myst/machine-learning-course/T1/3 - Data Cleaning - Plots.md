@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# T1 - 3 - Data Cleaning - Plots
+# 3 - Data Cleaning - Plots
 
 ```{code-cell} ipython3
 import pandas as pd

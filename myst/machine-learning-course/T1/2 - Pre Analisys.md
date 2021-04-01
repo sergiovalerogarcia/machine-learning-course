@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# T1 - 2 - Pre Analisys
+# 2 - Pre Analisys
 
 ```{code-cell} ipython3
 import pandas as pd

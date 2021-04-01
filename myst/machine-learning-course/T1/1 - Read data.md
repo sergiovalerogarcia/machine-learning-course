@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# T1 - 0 - Read data
+# 1 - Read data
 
 ```{code-cell} ipython3
 import pandas as pd
