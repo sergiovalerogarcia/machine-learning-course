@@ -19,6 +19,8 @@ kernelspec:
 
 ```{code-cell} ipython3
 import pandas as pd
+import numpy as np
+import random
 ```
 
 ```{code-cell} ipython3
@@ -119,10 +121,6 @@ data[["Total Mins", "State", "Night Mins", "Day Mins", "Eve Mins"]].head()
 ## Generación de números aleatorios
 
 ```{code-cell} ipython3
-import numpy as np
-```
-
-```{code-cell} ipython3
 np.random.randint(1,100)
 ```
 
@@ -138,10 +136,6 @@ def random_list(n,a,b):
 
 ```{code-cell} ipython3
 random_list(8,2,20)
-```
-
-```{code-cell} ipython3
-import random
 ```
 
 ```{code-cell} ipython3
@@ -164,3 +158,9 @@ np.random.choice(data.columns.values.tolist())
 ```
 
 ## Seed
+
+```{code-cell} ipython3
+np.random.seed(1234)
+random_array = [np.random.random() for i in range(5)]
+random_array
+```
