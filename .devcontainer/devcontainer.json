@@ -6,5 +6,7 @@
     "--env-file",".env.secrets",
     "-e JUPYTER_ENABLE_LAB=yes",
   ],
-  "postCreateCommand": "bash .devcontainer/install-dev-tools.sh && pip freeze > requirements.txt"
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/jupyuser/${localWorkspaceFolderBasename},type=bind,consistency=delegated",
+  "workspaceFolder": "/home/jupyuser/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "pip freeze > requirements.txt"
 }

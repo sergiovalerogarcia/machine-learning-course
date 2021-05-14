@@ -53,9 +53,20 @@ RUN useradd -ms /bin/bash jupyuser
 
 USER jupyuser
 
+ARG USER_HOME=/home/jupyuser
+
 RUN jupyter nbextensions_configurator enable && \
     jupyter nbextension enable execute_time/ExecuteTime && \
     jupyter nbextension enable toc2/main
+
+RUN git clone https://github.com/magicmonty/bash-git-prompt.git $USER_HOME/.bash-git-prompt --depth=1
+
+RUN echo "if [ -f '$USER_HOME/.bash-git-prompt/gitprompt.sh' ]; then\n\
+    GIT_PROMPT_ONLY_IN_REPO=1\n\
+    source $USER_HOME/.bash-git-prompt/gitprompt.sh\n\
+fi\n"\
+>> $USER_HOME/.bashrc
+
 
 WORKDIR /notebooks
 CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
