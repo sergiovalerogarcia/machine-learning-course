@@ -57,5 +57,7 @@ RUN jupyter nbextensions_configurator enable && \
     jupyter nbextension enable execute_time/ExecuteTime && \
     jupyter nbextension enable toc2/main
 
+COPY ./run-jupyter.sh /entrypoint.sh
+
 WORKDIR /notebooks
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+CMD ["/entrypoint.sh"]
