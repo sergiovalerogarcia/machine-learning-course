@@ -49,6 +49,8 @@ RUN pip install scikit-learn && \
 RUN pip install xlrd && \
     pip install jupyterthemes
 
+RUN pip install statsmodels
+
 RUN useradd -ms /bin/bash jupyuser
 
 USER jupyuser
